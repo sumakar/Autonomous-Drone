@@ -1,5 +1,5 @@
 ![e-Yantra Summer Internship](http://www.e-yantra.org/img/EyantraLogoLarge.png)
-![logo](https://github.com/eYSIP-2016/Autonomous-Drone/blob/master/Documentation/ReadMe_images/iitbblack.jpg)
+![logo](https://github.com/eYSIP-2016/Autonomous-Drone/blob/master/datasheets/ReadMe_images/iitbblack.jpg)
 ***
 
 # eYSIP-2016-Autonomous-Drone
