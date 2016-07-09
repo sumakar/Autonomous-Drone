@@ -5,9 +5,9 @@
 # Author  : Keyur Rakholiya												                                                #
 # Author  : Akshit Gandhi												                                                #
 #															                                                            #
-#by running this code, drone will go point A to point B autonomously.												    #
+#Objective: By running this code, drone will go point A to point B autonomously.												    #
 #															                                                            #
-# Requrinment: Refer Tutorial Folder											                                        #
+# Requrinment: preinstalled dronekit library.											                                        #
 #########################################################################################################################
 
 

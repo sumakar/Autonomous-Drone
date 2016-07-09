@@ -5,10 +5,10 @@
 # Author  : Keyur Rakholiya												#
 # Author  : Akshit Gandhi												#
 #															#
-# Drone will takeoff after running this code. and it will goes to certain height(adjustable) and after certain time it  #
+# Objective: Drone will takeoff after running this code. and it will goes to certain height(adjustable) and after certain time it  #
 # will land on the ground.												#
 #															#
-# Requrinment: Refer Tutorial Folder											#
+# Requrinment: preinstalled dronekit library, RPIO library.											#
 #########################################################################################################################
 
 from dronekit import connect, VehicleMode ,LocationGlobalRelative

@@ -5,9 +5,9 @@
 # Author  : Keyur Rakholiya												#
 # Author  : Akshit Gandhi												#
 #															#
-# by using this code, quadcopter can controlled by using laptop keyboard. we can also change the different modes also   #												#
+# Objective: By using this code, quadcopter can controlled by using laptop keyboard. we can also change the different modes also   #												#
 #															#
-# Requrinment: Refer Tutorial Folder											#
+# Requrinment: Pre-installed Dronekit, RPIO, getch libraries											#
 #########################################################################################################################
 from dronekit import connect, VehicleMode ,LocationGlobalRelative
 import time

@@ -1,0 +1,1 @@
+These are all the datasheets of components we have used and it also has a PARAMETER.PARAM file which contains the parameters which we had set in Mission Planner while working with the quadcopter and these parameters worked quite well for us.

@@ -5,10 +5,10 @@
 # Author  : Keyur Rakholiya												#
 # Author  : Akshit Gandhi												#
 #															#
-# by using this code, quadcopter will takeoff using ultra sonic sensor. reach some certain height and hold the altitude #
-# with use of barometer.												#
+# Objective: By using this code, quadcopter will takeoff using ultra sonic sensor. reach some certain height and hold the altitude #
+# with use of Altitude hold mode.												#
 #															#
-# Requrinment: Refer Tutorial Folder											#
+# Requrinment: Pre-installed dronekit, getch libraries											#
 #########################################################################################################################
 
 import RPi.GPIO as GPIO
