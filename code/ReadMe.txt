@@ -1,0 +1,3 @@
+This folder contains the codes which we had used for making the quadcopter autonomous.
+NOTE: You need a working UART connection between Raspberry Pi and APM via MAVProxy. Refer the tutorials section for step-by-step guide.
+The codes have an arming and disarming sequence which is mandatory, next is a failsafe system by which if the quadcopter goes out of your control you can get immediately land it or disarm it by pressing CTRL-C.
