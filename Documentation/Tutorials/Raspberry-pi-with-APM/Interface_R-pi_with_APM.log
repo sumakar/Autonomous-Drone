@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.16)  30 JUN 2016 11:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.16)  9 JUL 2016 20:28
 entering extended mode
 **./Interface_R-pi_with_APM.tex
 (Interface_R-pi_with_APM.tex
@@ -271,21 +271,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `Interface_R-pi_with_APM.toc'.
 
  [2]
-<wiring.jpg, id=68, 1111.53296pt x 579.17789pt>
-File: wiring.jpg Graphic file (type jpg)
- <use wiring.jpg>
-Package pdftex.def Info: wiring.jpg used on input line 39.
-(pdftex.def)             Requested size: 389.04237pt x 202.71529pt.
-
-Overfull \hbox (29.04237pt too wide) in paragraph at lines 39--40
- [][] 
- []
-
-[3]
+<wiring.png, id=68, 528.47438pt x 233.37187pt>
+File: wiring.png Graphic file (type png)
+ <use wiring.png>
+Package pdftex.def Info: wiring.png used on input line 39.
+(pdftex.def)             Requested size: 184.9688pt x 81.68137pt.
 Missing character: There is no ‚ in font cmbx10!
 Missing character: There is no Ä in font cmbx10!
 Missing character: There is no ¢ in font cmbx10!
-
+ [3 <./wiring.png>]
 Overfull \hbox (4.30087pt too wide) in paragraph at lines 46--47
 \OT1/cmr/m/n/10.95 into your RPi it is con-ve-nient to be able to con-nect from
  your Desk-top/Laptop
@@ -317,7 +311,7 @@ Missing character: There is no ô in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- <ip.jpg, id=73, 619.56468pt x 499.11469pt>
+ <ip.jpg, id=75, 619.56468pt x 499.11469pt>
 File: ip.jpg Graphic file (type jpg)
  <use ip.jpg>
 Package pdftex.def Info: ip.jpg used on input line 59.
@@ -328,13 +322,12 @@ Overfull \hbox (0.98547pt too wide) in paragraph at lines 56--61
 fconfig
  []
 
-[4 <./wiring.jpg>] <putty.png, id=81, 467.7475pt x 386.44376pt>
+<putty.png, id=76, 467.7475pt x 386.44376pt>
 File: putty.png Graphic file (type png)
-
-<use putty.png>
+ <use putty.png>
 Package pdftex.def Info: putty.png used on input line 66.
 (pdftex.def)             Requested size: 173.06386pt x 142.98195pt.
- [5 <./ip.jpg> <./putty.png (PNG copy)>]
+ [4 <./ip.jpg>]
 Overfull \hbox (0.95512pt too wide) in paragraph at lines 76--77
 []\OT1/cmr/m/n/10.95 sudo apt-get in-stall screen python-wxgtk2.8 python-matplo
 tlib python-
@@ -346,19 +339,19 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-<adv1.png, id=89, 842.14626pt x 229.85875pt>
+<adv1.png, id=84, 842.14626pt x 229.85875pt>
 File: adv1.png Graphic file (type png)
  <use adv1.png>
 Package pdftex.def Info: adv1.png used on input line 88.
 (pdftex.def)             Requested size: 311.58923pt x 85.04639pt.
+ [5 <./putty.png (PNG copy)>]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-
-<adv2.png, id=91, 301.125pt x 78.2925pt>
+ <adv2.png, id=94, 301.125pt x 78.2925pt>
 File: adv2.png Graphic file (type png)
  <use adv2.png>
 Package pdftex.def Info: adv2.png used on input line 95.
@@ -372,7 +365,8 @@ Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
  <connect.png, id=103, 677.53125pt x 795.97375pt>
 File: connect.png Graphic file (type png)
- <use connect.png>
+
+<use connect.png>
 Package pdftex.def Info: connect.png used on input line 123.
 (pdftex.def)             Requested size: 406.52188pt x 477.58794pt.
 
@@ -449,7 +443,7 @@ mr12.pfb><C:/Users/keyurRakholiya/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmr17.pfb><C:/Users/keyurRakholiya/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/keyurRakholiya/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Interface_R-pi_with_APM.pdf (9 pages, 396507 bytes).
+Output written on Interface_R-pi_with_APM.pdf (9 pages, 660249 bytes).
 PDF statistics:
  161 PDF objects out of 1000 (max. 8388607)
  35 named destinations out of 1000 (max. 500000)
