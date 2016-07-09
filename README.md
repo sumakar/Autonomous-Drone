@@ -18,6 +18,7 @@ Autonomous Drone project uses the following components:
 - **3D printing designs:** In this folder you will find some 3d design files which you can print to add safety to your electronics.
 - **Documentation:** This folder contains all the reports, presentation, poster and task list for our project.
 - **Reference Codes:** This folder contains codes which we had used to develop code for the drone.
+- **Tutorials:** This folder contains a step-by-step guide for going on with your project
 - **code:** This folder contains the python scripts which we had used on our drone to acheive its autonomous behaviour.
 - **datasheets:** This folder contains all the datasheet of the electronics/hardware parts which we had used for our project.
 
