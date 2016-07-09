@@ -13,6 +13,14 @@ Autonomous Drone project uses the following components:
 * **Programming Language:** (Python 2.7)
 * **Companion Computer:** Raspberry Pi B+ model
 
+##Folder Structure:
+***
+- **3D printing designs:** In this folder you will find some 3d design files which you can print to add safety to your electronics.
+- **Documentation:** This folder contains all the reports, presentation, poster and task list for our project.
+- **Reference Codes:** This folder contains codes which we had used to develop code for the drone.
+- **code:** This folder contains the python scripts which we had used on our drone to acheive its autonomous behaviour.
+- **datasheets:** This folder contains all the datasheet of the electronics/hardware parts which we had used for our project.
+
 ##Description:
 ***
 The latest technology currently in markets is the Drone Technology, Drones can solve a lot of purposes such as security & surveillance, mapping unreachable or hard to reach sites, aerial photography, military purposes, forest survey, etc. So, we have created a drone which is completely autonomous as well as it can be manually controlled with laptop using remote login.
