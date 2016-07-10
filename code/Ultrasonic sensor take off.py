@@ -5,10 +5,11 @@
 # Author  : Keyur Rakholiya												#
 # Author  : Akshit Gandhi												#
 #															#
-# Objective: By using this code, quadcopter will takeoff using ultra sonic sensor. reach some certain height and hold the altitude #
-# with use of Altitude hold mode.												#
+# Objective: By using this code, quadcopter will takeoff using ultra sonic sensor. reach some certain height and hold   #
+# the altitude  													#
+# with use of Altitude hold mode.											#
 #															#
-# Requrinment: Pre-installed dronekit, getch libraries											#
+# Requrinment: Pre-installed dronekit, getch libraries									#
 #########################################################################################################################
 
 import RPi.GPIO as GPIO
@@ -19,9 +20,11 @@ import getch
 from RPIO import PWM
 
 #######################################################################################################################
+
+# refer pin diagram first from tutorial
 class sonar1(threading.Thread):
         global distance
-        def run(self):					#function will return distance 
+        def run(self):		#function will return distance 
                 while True:
 			GPIO.output(TRIG,True)
                 	time.sleep(0.00001)
@@ -32,7 +35,7 @@ class sonar1(threading.Thread):
 	
                 	while GPIO.input(ECHO)==1:
                         	pass
-                	pulse_end = time.time()
+                	pulse_end = time.time()			#calculation part 
 
                 	pulse_duration = pulse_end - pulse_start
 
@@ -62,14 +65,14 @@ time.sleep(2)
 
 #############################################################################################
 print "connecting to vehicle...."
-vehicle = connect('/dev/ttyAMA0', baud = 57600)
+vehicle = connect('/dev/ttyAMA0', baud = 57600)	#connecting vehicle(APM) to R-pi on 57600 baudrate through UART
 print "connected"
 
 #change vehicle mode to stabilixe first
 print "\nSet Vehicle.mode =  (currently: %s)" % vehicle.mode.name
 while not vehicle.mode=='STABILIZE':
-    vehicle.mode = VehicleMode('STABILIZE')
-    vehicle.flush()
+    vehicle.mode = VehicleMode('STABILIZE')	#changing mode to stabilize
+    vehicle.flush()				#Write commands to apm
 
 print "vehicle mode: %s" % vehicle.mode
 
@@ -84,14 +87,14 @@ while not vehicle.armed:
 print "its armed"
 
 ##################################################
-throttle = PWM.Servo()
+throttle = PWM.Servo()		#creating object and initializating..
 mode = PWM.Servo()
 
 mode.set_servo(26,1200)
 throttle.set_servo(27,1200)# pin 13, pin 14 is Ground
 ##################################################
 print "Taking off!"
-
+#creating object
 t = sonar1()
 distance = t.run()
 
@@ -99,12 +102,12 @@ print "Initial" , distance
 
 try:
         while True:
-                distance = t.run()
+                distance = t.run()	#function calling and returning distance
 
 		print "inside"
                 if distance < 0.65 and th < 1700:
                 
-                        th = th + 20
+                        th = th + 20	#throttle increasing
                         throttle.set_servo(27,th)
                         print th
                         time.sleep(1.3)
@@ -123,13 +126,15 @@ try:
                         
 # if keyboard intrerupt will generate vehicle goes to land mode                        
 except KeyboardInterrupt:
-        mode.set_servo(26,1800)
+        mode.set_servo(26,1800) 	#changing mode with PWM(1800)
         print "land"
 	time.sleep(5)
 	vehicle.armed = False
+	
+	#disarming the vehicle
 	while not vehicle.armed:
 		vehicle.armed = False
-		vehicle.flush()
+		vehicle.flush()		#write command to apm
 	print "Disarmed"
 
 #after 5 seconds ,vehicle goes in to LAND mode
@@ -137,5 +142,5 @@ time.sleep(5)
 print "land"
 mode.set_servo(26,1800)
 GPIO.cleanup()
-
+#clean all gpio and terminate the program
 
