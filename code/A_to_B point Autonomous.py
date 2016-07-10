@@ -5,12 +5,12 @@
 # Author  : Keyur Rakholiya												                                                #
 # Author  : Akshit Gandhi												                                                #
 #															                                                            #
-#Objective: By running this code, drone will go point A to point B autonomously.												    #
+#Objective: By running this code, drone will go point A to point B autonomously.									    #
 #															                                                            #
-# Requrinment: preinstalled dronekit library.											                                        #
+# Requrinment: preinstalled dronekit library.											                                #
 #########################################################################################################################
 
-
+#importing all the necessary library
 from dronekit import connect, VehicleMode, LocationGlobalRelative
 import time
 
@@ -18,22 +18,22 @@ import time
 
 
 print "connecting to vehicle...."
-vehicle = connect('/dev/ttyAMA0', baud = 57600)
+vehicle = connect('/dev/ttyAMA0', baud = 57600)             #connecting Rpi to APM on baudrte of 57600
 print "connected"
 
 #changing vehicle mode to stabilize
 print "\nSet Vehicle.mode = (currently: %s)" % vehicle.mode.name
 while not vehicle.mode=='GUIDED':
-    vehicle.mode = VehicleMode('GUIDED')
-    vehicle.flush()
+    vehicle.mode = VehicleMode('GUIDED')    #changing mode to guided first
+    vehicle.command.upload()                #write the command in apm
 
-print "vehicle mode: %s" % vehicle.mode
+print "vehicle mode: %s" % vehicle.mode     #printing current vehicle mode
 
 # ARMING the vehicle
 vehicle.armed = True
 while not vehicle.armed:
     vehicle.armed = True
-    vehicle.flush()
+    vehicle.flush()         #write command to apm
     print " trying to change mode and arming ..."
     time.sleep(1)
 
@@ -43,7 +43,7 @@ print "its armed"
 
 
 
-
+#defining a function
 def arm_and_takeoff(aTargetAltitude):
     print "Taking off!"
     vehicle.simple_takeoff(aTargetAltitude) # Take off to target altitude
@@ -58,29 +58,29 @@ def arm_and_takeoff(aTargetAltitude):
             break
         time.sleep(1)
 
-arm_and_takeoff(10)
+arm_and_takeoff(10) # 10 meter is target altitude here
 
 print "Set default/target airspeed to 3"
-vehicle.airspeed = 3
+vehicle.airspeed = 3    #speed in m/s
 
 print "Going towards first point for 30 seconds ..."
-point1 = LocationGlobalRelative(-35.361354, 149.165218, 20)
-vehicle.simple_goto(point1)
+point1 = LocationGlobalRelative(-35.361354, 149.165218, 20)  #give longitude latitude ,altitude(in meter)
+vehicle.simple_goto(point1)                                 #function calling
 
 # sleep so we can see the change in map
 time.sleep(30)
 
 print "Going towards second point for 30 seconds (groundspeed set to 10 m/s) ..."
-point2 = LocationGlobalRelative(-35.363244, 149.168801, 20)
+point2 = LocationGlobalRelative(-35.363244, 149.168801, 20)     #second point location
 vehicle.simple_goto(point2, groundspeed=10)
 
 # sleep so we can see the change in map
 time.sleep(30)
 
 print "Returning to Launch"
-vehicle.mode = VehicleMode("RTL")
+vehicle.mode = VehicleMode("RTL")   #changing mode to Return To Launch
 
 #Close vehicle object before exiting script
 print "Close vehicle object"
-vehicle.close()
+vehicle.close() #disARMED the vehicle
 
